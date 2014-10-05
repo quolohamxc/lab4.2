@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="query" class="com.floionze.action.abaction" method="queryab">
+        	<result name="namesuccess" type="redirect">listbook.action</result>
+            <result name="isbnsuccess">/show.jsp</result>
+            <result>/error.jsp</result>
+        </action>
+        <action name="listbook" class="com.floionze.action.abaction" method="listb">
+        	<result name="namesuccess">/query.jsp</result>
+            <result>/error.jsp</result>
+        </action>
+        <action name="removebook" class="com.floionze.action.abaction" method="removeb">
+            <result name="isbnsuccess">/success.jsp</result>
+            <result>/error.jsp</result>
+        </action>
+        <action name="editbook" class="com.floionze.action.abaction" method="loadb">
+            <result>/editbook.jsp</result>
+        </action>
+        
+        <action name="storebook" class="com.floionze.action.abaction" method="storeb">
+            <result name="newauthor">/editauthor.jsp</result>
+            <result>/success.jsp</result>
+        </action>
+        
+        <action name="updatebook" class="com.floionze.action.abaction" method="updateb">
+            <result name="newauthor">/editauthor.jsp</result>
+            <result>/query.jsp</result>
+        </action>
+        
+        <action name="storeauthor" class="com.floionze.action.abaction" method="storea">
+            <result>/editbook.jsp</result>
+        </action>
+        
+        <action name="init" class="com.floionze.action.abaction" method="initdb">
+            <result>/success.jsp</result>
+        </action>
+        
+    </package>
+</struts>
