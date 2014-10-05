@@ -1,5 +1,5 @@
 package com.floionze.model;
-
+//changed for lab4
 public class book {
 	private String isbn;
     private String title;

@@ -1,5 +1,5 @@
 package com.floionze.model;
-
+//changed for lab4
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

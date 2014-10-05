@@ -1,5 +1,5 @@
 package com.floionze.model;
-
+// changed for lab4
 public class author {
 	private int authorid;
 	private String name;
